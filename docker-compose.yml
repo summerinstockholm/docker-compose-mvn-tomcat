@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - "sharedartefact:/target/"
+      - "sharedartefact:/target/*"
   tomcat:
     depends_on:
       - maven
@@ -17,6 +17,7 @@ services:
       - '8080:8080'
     volumes:
       - "webapps:/usr/local/tomcat/webapps"
+      - "sharedartefact:webapps"
 volumes:
   sharedartefact:
   webapps:
