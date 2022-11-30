@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - "shareddata:/tmp/shareddata"
+      - "sharedartefact:/target/hello-1.0.war"
   tomcat:
     depends_on:
       - maven
@@ -16,6 +16,7 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - "shareddata:/tmp/shareddata"
+      - "webapps:/usr/local/tomcat/webapps"
 volumes:
-  shareddata:
+  sharedartefact:
+  webapps:
