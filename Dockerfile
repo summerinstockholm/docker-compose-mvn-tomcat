@@ -1,6 +1,5 @@
 FROM java:8
 FROM maven:alpine
-VOLUME "shareddata"
 COPY . .
 RUN mvn package 
 RUN cp /target/hello-1.0.war /tmp/shareddata
