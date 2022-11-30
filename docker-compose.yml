@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
       volumes:
         - type: volume
-          source: sharedata
+          source: shareddata
           target: /tmp/shareddata
   tomcat:
     depends_on:
