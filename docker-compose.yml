@@ -2,7 +2,7 @@ version: '3.8'
 services:
   maven:
     build:
-      context: .
+      context: ./
       dockerfile: Dockerfile
       volumes:
         - type: volume
