@@ -5,10 +5,10 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-      volumes:
-        - type: volume
-          source: shareddata
-          target: /tmp/shareddata
+    volumes:
+      - type: volume
+        source: shareddata
+        target: /tmp/shareddata
   tomcat:
     depends_on:
       - maven
