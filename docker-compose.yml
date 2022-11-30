@@ -7,7 +7,7 @@ services:
       volumes:
         - type: volume
           source: sharedata
-          target: /tmp/sharedata
+          target: /tmp/shareddata
   tomcat:
     depends_on:
       - maven
