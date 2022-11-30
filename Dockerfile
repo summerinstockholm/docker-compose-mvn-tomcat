@@ -3,5 +3,5 @@ FROM maven:alpine
 VOLUME "shareddata"
 COPY . .
 RUN mvn package 
-RUN /target/hello-1.0.war /tmp/shareddata
+RUN cp /target/hello-1.0.war /tmp/shareddata
 RUN rm -rf  /boxfuse-sample-java-war-hello/target/*
