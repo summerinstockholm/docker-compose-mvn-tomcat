@@ -6,7 +6,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     volumes:
-      - shareddata:/tmp/shareddata
+      - shareddata:./tmp/shareddata
   tomcat:
     depends_on:
       - maven
@@ -16,6 +16,6 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - shareddata:/tmp/shareddata
+      - shareddata:./tmp/shareddata
 volumes:
   shareddata: 
