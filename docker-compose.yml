@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - "sharedartefact:/target/hello-1.0.war"
+      - "sharedartefact:/target/"
   tomcat:
     depends_on:
       - maven
