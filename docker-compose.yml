@@ -16,7 +16,6 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - "sharedartefact::/usr/local/tomcat/webapps"
-      - "webapps"
+      - "sharedartefact:/usr/local/tomcat/webapps"
 volumes:
   sharedartefact:
