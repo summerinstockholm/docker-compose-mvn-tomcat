@@ -1,1 +1,20 @@
----
+version: '3.8'
+services:
+  maven:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      volumes:
+        - type: volume
+          source: sharedata
+          target: /tmp/sharedata
+  tomcat:
+    depends_on:
+      - maven
+    build:
+      context: .
+      dockerfile: Dockerfile.tomcat
+    ports:
+      - '8080:8080'
+volumes:
+  shareddata:
